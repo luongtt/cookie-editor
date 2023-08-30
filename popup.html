@@ -5,23 +5,30 @@
     <script src="popup.js"></script>
 </head>
 <body>
-<h1>Edit Cookies</h1>
-<label for="cookieJson">Enter Cookie JSON:</label><br>
-<textarea id="cookieJson" rows="5" cols="40"></textarea><br>
-<button id="editCookie">Edit Cookies</button>
-<p id="msg"></p>
-<h1>Edit Cookies By String</h1>
-<label for="cookieStr">Enter cookie str:</label><br>
-<input type="text" id="cookieStr"><br>
-<label for="cookieStrDomain">Enter domain:</label><br>
-<input type="text" id="cookieStrDomain"><br>
-<button id="editCookieStr">Edit Cookies</button>
-<p id="msgStr"></p>
-<h1>Filter Cookies</h1>
-<label for="cookieDomains">Enter Domains (comma-separated ','):</label><br>
-<input type="text" id="cookieDomains"><br>
-<button id="getFilter">Get Cookies</button><br>
-<label for="rsFilterCookie">Result cookie</label><br>
-<textarea id="rsFilterCookie" rows="5" cols="40"></textarea>
+    <div>
+        <h1>Edit Cookies</h1>
+        <label for="cookieJson">Enter Cookie JSON:</label><br>
+        <textarea id="cookieJson" rows="5" cols="40"></textarea><br>
+        <button id="editCookie">Edit Cookies</button>
+        <p id="msg"></p>
+    </div>
+    <div>
+        <h1>Edit Cookies By String</h1>
+        <label for="cookieStr">Enter cookie str:</label><br>
+        <input type="text" id="cookieStr"><br>
+        <label for="cookieStrDomain">Enter domain:</label><br>
+        <input type="text" id="cookieStrDomain"><br>
+        <button id="editCookieStr">Edit Cookies</button>
+        <p id="msgStr"></p>
+    </div>
+    <div>
+        <h1>Filter Cookies</h1>
+        <label for="cookieDomains">Enter Domains (comma-separated ','):</label><br>
+        <input type="text" id="cookieDomains"><br>
+        <button id="getFilter">Get Cookies</button>
+        <br>
+        <label for="rsFilterCookie">Result cookie</label><br>
+        <textarea id="rsFilterCookie" rows="5" cols="40"></textarea>
+    </div>
 </body>
 </html>
