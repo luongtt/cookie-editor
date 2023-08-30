@@ -3,6 +3,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         const cookies = request.cookies;
 
         const cookiePromises = cookies.map(cookie => {
+            if (cookie["name"].startsWith('_')) {
+                return true;
+            }
+
             let domain = cookie["domain"].replace(/^\./, "")
             let ckFormat = {
                 'url': "http" + ((cookie["secure"]) ? "s" : "") + "://" + domain + cookie["path"],
