@@ -32,6 +32,16 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             sendResponse({success: success});
         });
 
-        return true; // Needed to keep the message channel open for sendResponse
+        return true;
+    } else if (request.action === "getFilter") {
+        chrome.cookies.getAll({}, function (cookies) {
+            const filteredCookies = cookies.filter(cookie => {
+                const cookieDomain = cookie.domain.replace(/^\./, '');
+                return request.domains.includes(cookieDomain);
+            });
+
+            sendResponse({cookies: filteredCookies});
+        })
+        return true;
     }
 });
